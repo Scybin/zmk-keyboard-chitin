@@ -14,7 +14,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: scybin
-      url-base: https://github.com/chitin
+      url-base: https://github.com/scybin
   projects:
     - name: zmk
       remote: zmkfirmware
