@@ -1,0 +1,5 @@
+config SHIELD_CHITIN_LEFT
+		def_bool $(shields_list_contains,chitin_left)
+
+config SHIELD_CHITIN_RIGHT
+		def_bool $(shields_list_contains,chitin_right)
