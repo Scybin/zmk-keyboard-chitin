@@ -1,4 +1,4 @@
-#include "scyboard.dtsi"
+#include "chitin.dtsi"
 
 &default_transform {
     col-offset = <6>;
