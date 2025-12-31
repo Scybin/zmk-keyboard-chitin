@@ -7,7 +7,7 @@
 &kscan0 {
         col-gpios 
             = <&pro_micro 16 GPIO_ACTIVE_HIGH>  // COL 13 (outer)
-            = <&pro_micro 14 GPIO_ACTIVE_HIGH>  // COL 12 (pinky)
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH>  // COL 12 (pinky)
             , <&pro_micro 15 GPIO_ACTIVE_HIGH>  // COL 11 (ring)
             , <&pro_micro 18 GPIO_ACTIVE_HIGH>  // COL 10 (middle)
             , <&pro_micro 19 GPIO_ACTIVE_HIGH>  // COL 9 (index)
