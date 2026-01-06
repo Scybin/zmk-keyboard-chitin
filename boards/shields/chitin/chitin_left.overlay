@@ -1,9 +1,5 @@
 #include "chitin.dtsi"
 
-&trackball_listener {
-    status = "okay";
-};
-
 &kscan0 {
         col-gpios 
             = <&pro_micro 21 GPIO_ACTIVE_HIGH>  // COL 0 (outer)
@@ -14,4 +10,12 @@
             , <&pro_micro 14 GPIO_ACTIVE_HIGH>  // COL 5 (inner)
             , <&pro_micro 16 GPIO_ACTIVE_HIGH>  // COL 6 (extra)
             ;
+};
+
+&trackball_listener {
+	status = "okay";
+};
+
+&trackball_split {
+	status = "disabled";
 };
