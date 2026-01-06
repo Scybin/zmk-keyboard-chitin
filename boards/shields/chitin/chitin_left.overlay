@@ -11,7 +11,3 @@
             , <&pro_micro 16 GPIO_ACTIVE_HIGH>  // COL 6 (extra)
             ;
 };
-
-&pim447_listener {
-    status = "disabled";
-};
