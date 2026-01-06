@@ -19,4 +19,7 @@ config ZMK_POINTING
 config I2C
     default y
 
+config ZMK_TRACKBALL_PIM447
+    default y
+
 endif
