@@ -21,15 +21,8 @@
     };
 };
 
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_pim447>;
-    };
-
-    right_split_device {
-        compatible = "zmk,input-split-device";
-    };
+&trackball_split {
+    device = <&trackball_pim447>;
 };
 
 &default_transform {

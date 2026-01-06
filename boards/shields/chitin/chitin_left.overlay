@@ -1,9 +1,7 @@
 #include "chitin.dtsi"
 
-/ {
-    left_split_device {
-        compatible = "zmk,input-split-device";
-    };
+&trackball_listener {
+    status = "okay";
 };
 
 &kscan0 {
