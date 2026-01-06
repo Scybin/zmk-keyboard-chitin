@@ -1,5 +1,37 @@
 #include "chitin.dtsi"
 
+&pro_micro_i2c {
+    status = "okay";
+
+    trackball_pim447: trackball@0A {
+        compatible = "pimoroni,trackball_pim447";
+        reg = <0x0A>;
+        sensitivity = <64>;  /* Range: 1-255 */
+        move-factor = <2>;   /* Range: 1-10 */
+        scroll-factor = <1>; /* Range: 1-10 */
+
+        /* Optional LED color (RGB values 0-255) */
+        led-red = <255>;
+        led-green = <0>;
+        led-blue = <0>;
+        
+        /* Optional axis inversion */
+        invert-x;  /* Uncomment to invert X axis */
+        /* invert-y; */  /* Uncomment to invert Y axis */
+    };
+};
+
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball_pim447>;
+    };
+
+    right_split_device {
+        compatible = "zmk,input-split-device";
+    };
+};
+
 &default_transform {
     col-offset = <7>;
 };
