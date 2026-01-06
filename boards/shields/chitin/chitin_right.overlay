@@ -21,7 +21,7 @@
     
     trackball_pim447: trackball@a {
         compatible = "pimoroni,trackball_pim447";
-        reg = <0x0a>;
+        reg = <0x0A>;
 
         sensitivity = <64>;  /* Range: 1-255 */
         move-factor = <2>;   /* Range: 1-10, scales cursor movement speed */
