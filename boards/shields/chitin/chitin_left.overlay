@@ -1,8 +1,30 @@
 #include "chitin.dtsi"
 
+&pro_micro_i2c {
+    status = "okay";
+
+    trackball_pim447: trackball@0A {
+        compatible = "pimoroni,trackball_pim447";
+        reg = <0x0A>;
+
+        sensitivity = <64>;
+        move-factor = <2>;
+        scroll-factor = <1>;
+
+        led-red = <255>;
+        led-green = <0>;
+        led-blue = <0>;
+
+        /* Optional */
+        invert-x;
+        /* invert-y; */
+    };
+};
+
 / {
-    left_split_device {
-        compatible = "zmk,input-split-device";
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball_pim447>;
     };
 };
 
