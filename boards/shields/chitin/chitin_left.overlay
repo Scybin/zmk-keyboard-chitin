@@ -1,11 +1,5 @@
 #include "chitin.dtsi"
 
-#if defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
-&chitin_tb_listener {
-    status = "okay";
-};
-#endif
-
 &kscan0 {
         col-gpios 
             = <&pro_micro 21 GPIO_ACTIVE_HIGH>  // COL 0 (outer)

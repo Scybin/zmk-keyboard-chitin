@@ -14,13 +14,3 @@ config ZMK_SPLIT
 	default y
 	
 endif
-
-if SHIELD_CHITIN_LEFT_TB || SHIELD_CHITIN_RIGHT_TB
-
-config ZMK_POINTING
-    default y
-
-config I2C
-    default y
-
-endif
