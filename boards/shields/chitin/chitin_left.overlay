@@ -6,18 +6,18 @@
     trackball_pim447: trackball@0A {
         compatible = "pimoroni,trackball_pim447";
         reg = <0x0A>;
+        sensitivity = <64>;  /* Range: 1-255 */
+        move-factor = <2>;   /* Range: 1-10 */
+        scroll-factor = <1>; /* Range: 1-10 */
 
-        sensitivity = <64>;
-        move-factor = <2>;
-        scroll-factor = <1>;
-
+        /* Optional LED color (RGB values 0-255) */
         led-red = <255>;
         led-green = <0>;
         led-blue = <0>;
-
-        /* Optional */
-        invert-x;
-        /* invert-y; */
+        
+        /* Optional axis inversion */
+        invert-x;  /* Uncomment to invert X axis */
+        /* invert-y; */  /* Uncomment to invert Y axis */
     };
 };
 
@@ -27,7 +27,6 @@
         device = <&trackball_pim447>;
     };
 };
-
 
 &kscan0 {
         col-gpios 
