@@ -1,10 +1,11 @@
 #include "chitin.dtsi"
 
-#if defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
-&chitin_tb_listener {
-    status = "okay";
+/ {
+    left_split_device {
+        compatible = "zmk,input-split-device";
+    };
 };
-#endif
+
 
 &kscan0 {
         col-gpios 

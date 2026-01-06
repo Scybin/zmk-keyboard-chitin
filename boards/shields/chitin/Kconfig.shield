@@ -3,9 +3,3 @@ config SHIELD_CHITIN_LEFT
 
 config SHIELD_CHITIN_RIGHT
 		def_bool $(shields_list_contains,chitin_right)
-
-config SHIELD_CHITIN_LEFT_TB
-    def_bool $(shields_list_contains,chitin_left_tb)
-
-config SHIELD_CHITIN_RIGHT_TB
-    def_bool $(shields_list_contains,chitin_right_tb)
