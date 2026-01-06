@@ -6,6 +6,15 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_POINTING
+    default y
+
+config I2C
+    default y
+
+config ZMK_TRACKBALL_PIM447
+    default y
+
 endif
 
 if SHIELD_CHITIN_LEFT || SHIELD_CHITIN_RIGHT
