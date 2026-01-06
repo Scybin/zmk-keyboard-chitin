@@ -16,7 +16,7 @@
             ;
 };
 
-&i2c0 {
+&i2c {
     status = "okay";
     
     trackball_pim447: trackball@0A {
