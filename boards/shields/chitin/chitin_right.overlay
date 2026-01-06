@@ -19,9 +19,9 @@
 &i2c0 {
     status = "okay";
     
-    trackball_pim447: trackball@0A {
+    trackball_pim447: trackball@a {
         compatible = "pimoroni,trackball_pim447";
-        reg = <0x0A>;
+        reg = <0x0a>;
         sensitivity = <64>;  /* Range: 1-255 */
         move-factor = <2>;   /* Range: 1-10, scales cursor movement speed */
         scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
