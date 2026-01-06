@@ -18,6 +18,12 @@ config ZMK_TRACKBALL_PIM447
 config ZMK_MOUSE
     default y
 
+config ZMK_TRACKBALL_PIM447_DEBUG
+    default y
+
+config ZMK_USB_LOGGING
+    default y
+    
 endif
 
 if SHIELD_CHITIN_LEFT || SHIELD_CHITIN_RIGHT
