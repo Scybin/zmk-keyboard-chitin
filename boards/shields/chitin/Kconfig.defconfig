@@ -20,9 +20,6 @@ config ZMK_MOUSE
 
 config ZMK_TRACKBALL_PIM447_DEBUG
     default y
-
-config ZMK_USB_LOGGING
-    default y
     
 endif
 
