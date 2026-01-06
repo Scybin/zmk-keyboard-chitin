@@ -1,6 +1,6 @@
 #include "chitin.dtsi"
 
-&i2c {
+&pro_micro_i2c {
     status = "okay";
 
     trackball_pim447: trackball@0A {
