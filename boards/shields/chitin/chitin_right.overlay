@@ -1,4 +1,8 @@
-#include "chitin.dtsi"
+﻿#include "chitin.dtsi"
+
+&default_transform {
+	col-offset = <7>;
+};
 
 &kscan0 {
         col-gpios 
@@ -13,33 +17,17 @@
 };
 
 &pro_micro_i2c {
-	status = "okay";
+    status = "okay";
+    clock-frequency = <I2C_BITRATE_FAST>;
 
-	trackball_pim447: trackball@0a {
-		status = "okay";
-		compatible = "pimoroni,trackball-pim447";
-		reg = <0x0a>;
-
-        sensitivity = <64>;  /* Range: 1-255 */
-        move-factor = <2>;   /* Range: 1-10, scales cursor movement speed */
-        scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
-        
-        /* Optional LED color (RGB values 0-255) */
-        led-red = <255>;
-        led-green = <0>;
-        led-blue = <0>;
-        
-        /* Optional axis inversion */
-        /* invert-x; */
-        /* invert-y; */
-	};
+    pimoroni_pim447: trackball@a {
+        compatible = "pimoroni,trackball_pim447";
+        status = "okay";
+        reg = <0x0a>;
+    };
 };
 
-&trackball_split {
-	status = "okay";
-	device = <&trackball_pim447>;
-};
-
-&trackball_listener {
-	status = "disabled";
+&pim447_listener {
+    status = "okay";
+    device = <&pimoroni_pim447>;
 };

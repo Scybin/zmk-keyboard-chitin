@@ -12,10 +12,6 @@
             ;
 };
 
-&trackball_listener {
-	status = "okay";
-};
-
-&trackball_split {
-	status = "disabled";
+&pim447_listener {
+    status = "disabled";
 };
