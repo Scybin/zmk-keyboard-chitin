@@ -16,7 +16,7 @@
             ;
 };
 
-&i2c {
+&i2c0 {
     status = "okay";
     
     trackball_pim447: trackball@0A {
@@ -27,9 +27,9 @@
         scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
         
         /* Optional LED color (RGB values 0-255) */
-        led-red = <255>;
+        led-red = <0>;
         led-green = <0>;
-        led-blue = <0>;
+        led-blue = <255>;
         
         /* Optional axis inversion */
         invert-x;  /* Uncomment to invert X axis */
