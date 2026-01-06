@@ -14,9 +14,6 @@ config I2C
 
 config ZMK_TRACKBALL_PIM447
     default y
-
-config ZMK_TRACKBALL_PIM447_DEBUG
-    default y
     
 endif
 
