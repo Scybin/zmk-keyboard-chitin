@@ -1,12 +1,15 @@
 if SHIELD_CHITIN_RIGHT
+
 config ZMK_KEYBOARD_NAME
     default "chitin"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+
 endif
 
 if SHIELD_CHITIN_LEFT || SHIELD_CHITIN_RIGHT
+
 config ZMK_SPLIT
     default y
 
@@ -15,4 +18,5 @@ config ZMK_POINTING
 
 config I2C
     default y
+
 endif
