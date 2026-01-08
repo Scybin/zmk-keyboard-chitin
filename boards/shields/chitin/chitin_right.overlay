@@ -25,13 +25,13 @@
         reg = <0x0A>;
 
         sensitivity = <255>;  /* Range: 1-255 */
-        move-factor = <2>;   /* Range: 1-10, scales cursor movement speed */
+        move-factor = <6>;   /* Range: 1-10, scales cursor movement speed */
         scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
         
         /* Optional LED color (RGB values 0-255) */
-        led-red = <0>;
-        led-green = <0>;
-        led-blue = <0>;
+        led-red = <255>;
+        led-green = <255>;
+        led-blue = <255>;
         led-white = <255>;
         
         /* Optional axis inversion */
@@ -49,7 +49,6 @@
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT)
-            &zip_xy_scaler 30 1
 
             &zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP)
             &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)
