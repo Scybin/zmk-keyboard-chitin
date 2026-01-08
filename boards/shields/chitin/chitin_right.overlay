@@ -1,9 +1,5 @@
 ﻿#include "chitin.dtsi"
 
-#include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <input/processors.dtsi>
-#include <behaviors/input_gestures_accel.dtsi>
-
 &default_transform {
 	col-offset = <7>;
 };
@@ -53,15 +49,10 @@
             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT)
 
-            &pointer_accel
+            &zip_xy_scaler 20 1
 
             &zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP)
             &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)
         >;
     };
-};
-
-&pointer_accel {
-    input-type = <INPUT_EV_REL>;
-    codes = <INPUT_REL_X INPUT_REL_Y>;
 };
