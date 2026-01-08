@@ -31,7 +31,8 @@
         /* Optional LED color (RGB values 0-255) */
         led-red = <0>;
         led-green = <0>;
-        led-blue = <255>;
+        led-blue = <0>;
+        led-white = <255>;
         
         /* Optional axis inversion */
         /* invert-x; */   /* Uncomment to invert X axis */
