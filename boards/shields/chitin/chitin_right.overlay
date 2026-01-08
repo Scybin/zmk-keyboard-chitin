@@ -46,12 +46,10 @@
         status = "okay";
 
         input-processors = <
-            /* Movement: swap axes, then invert final X */
             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT)
-            &zip_xy_scaler 8 1
+            &zip_xy_scaler 10 1
 
-            /* Scroll: keep scroll consistent too */
             &zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP)
             &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)
         >;
