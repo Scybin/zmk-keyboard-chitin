@@ -41,7 +41,6 @@
         led-red = <255>;
         led-green = <0>;
         led-blue = <0>;
-        led-white = <0>;
         
         /* Optional axis inversion */
         /* invert-x; */   /* Uncomment to invert X axis */
