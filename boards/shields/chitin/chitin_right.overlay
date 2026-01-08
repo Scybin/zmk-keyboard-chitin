@@ -34,8 +34,8 @@
         led-blue = <255>;
         
         /* Optional axis inversion */
-        invert-x;   /* Uncomment to invert X axis */
-        invert-y;   /* Uncomment to invert Y axis */
+        /* invert-x; */   /* Uncomment to invert X axis */
+        /* invert-y; */   /* Uncomment to invert Y axis */
     };
 };
 
@@ -46,8 +46,13 @@
         status = "okay";
 
         input-processors = <
+            /* Movement: swap axes, then invert final X */
             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)
+            &zip_xy_transform (INPUT_TRANSFORM_X_INVERT)
+
+            /* Scroll: keep scroll consistent too */
             &zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP)
+            &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)
         >;
     };
 };
