@@ -1,5 +1,9 @@
 ﻿#include "chitin.dtsi"
 
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
+
 &default_transform {
 	col-offset = <7>;
 };
@@ -14,6 +18,11 @@
             , <&pro_micro 20 GPIO_ACTIVE_HIGH>  // COL 8 (inner)
             , <&pro_micro 21 GPIO_ACTIVE_HIGH>  // COL 7 (extra)
             ;
+};
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    codes = <INPUT_REL_X INPUT_REL_Y>;
 };
 
 &pro_micro_i2c {
@@ -49,6 +58,8 @@
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT)
+
+            &pointer_accel
 
             &zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP)
             &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)
