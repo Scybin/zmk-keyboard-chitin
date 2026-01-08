@@ -44,5 +44,9 @@
         compatible = "zmk,input-listener";
         device = <&trackball_pim447>;
         status = "okay";
+
+        input-processors = <
+            &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)
+            &zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP)
     };
 };
