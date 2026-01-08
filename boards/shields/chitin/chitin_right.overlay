@@ -24,8 +24,8 @@
         compatible = "pimoroni,trackball_pim447";
         reg = <0x0A>;
 
-        sensitivity = <200>;  /* Range: 1-255 */
-        move-factor = <8>;   /* Range: 1-10, scales cursor movement speed */
+        sensitivity = <255>;  /* Range: 1-255 */
+        move-factor = <10>;   /* Range: 1-10, scales cursor movement speed */
         scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
         
         /* Optional LED color (RGB values 0-255) */
@@ -34,7 +34,7 @@
         led-blue = <255>;
         
         /* Optional axis inversion */
-        /* invert-x; */  /* Uncomment to invert X axis */
+        invert-x;   /* Uncomment to invert X axis */
         invert-y;   /* Uncomment to invert Y axis */
     };
 };
