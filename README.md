@@ -4,7 +4,7 @@ This repository provides shield files for the [chitin](https://github.com/Scybin
 
 ## Usage
 
-Edit your west.yaml file found in your zmk config's config directory to add the scyboard module.
+Edit your west.yaml file found in your zmk config's config directory to add the chitin module and Pimoroni trackball driver module.
 
 Example:
 
@@ -18,11 +18,14 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3.0
       import: app/west.yml
     - name: zmk-keyboard-chitin
       remote: scybin
       revision: main
+    - name: zmk-driver-pim447
+      remote: scybin
+      revision: master
   self:
     path: config
 ```
